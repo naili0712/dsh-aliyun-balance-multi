@@ -1,0 +1,57 @@
+{
+  "name": "dsh-aliyun-balance-multi",
+  "version": "0.1.0",
+  "description": "阿里云代金券 / 余额看板（多账号版）：一账号一行，名字可自定义；悬停看券面值/已用、最早失效时间、现金/信控。改自 dsh-aliyun-balance 0.1.4。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/normalize.js",
+    "lib/bss-client.js",
+    "lib/cache.js",
+    "assets",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "aliyun",
+    "aliyun-balance",
+    "coupon",
+    "voucher",
+    "balance",
+    "widget",
+    "multi-account"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dshhub": {
+    "schemaVersion": 1,
+    "displayName": "阿里云余额与代金券（多账号）",
+    "summary": "一行一个阿里云账号，每行「名字 · 可用合计」；名字在面板里自定义。悬停看券面值/已用、最早失效时间、现金/信控。只读 BSS 接口。",
+    "categories": [
+      "费用",
+      "Web UI"
+    ],
+    "surfaces": [
+      "host",
+      "web"
+    ],
+    "permissions": {
+      "network": [
+        "https://*.aliyuncs.com"
+      ]
+    }
+  }
+}
